@@ -1,0 +1,7 @@
+#pragma once
+
+// do not modify this function signature
+void gpu_sort_tiles(int* A, int A_len);
+void gpu_sort_basic(int* A, int A_len);
+void gpu_sort_tiled(int* A, int A_len);
+

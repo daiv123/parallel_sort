@@ -1,0 +1,23 @@
+# lab: Tiled Convolution
+rai:
+  version: 0.2
+  image: raiproject/pumps2018:amd64-cuda100
+resources:
+  cpu:
+    architecture: amd64
+  gpu:
+    count: 1
+commands:
+  build:
+    - cmake /src
+    - make
+    - ./cuda_prog
+    # - >-
+    #   nvprof --cpu-profiling on --export-profile timeline.nvprof --
+    #   ./cuda_prog
+    # - >-
+    #   nvprof --cpu-profiling on --export-profile analysis.nvprof --analysis-metrics --
+    #   ./cuda_prog
+    # - nsys profile --stats=true ./cuda_prog
+    # - nv-nsight-cu-cli -o cuda_prog ./cuda_prog
+
